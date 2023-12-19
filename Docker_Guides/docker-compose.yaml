@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  awx:
+    image: ansible/awx:17.1.0
+    container_name: awx
+    ports:
+      - "80:8052"
+    environment:
+      - SECRET_KEY=Uday@2024  # Replace with a secret key
+      - ADMIN_USER=admin              # Replace with your desired admin username
+      - ADMIN_PASSWORD=password    # Replace with your desired admin password
+    restart: always
